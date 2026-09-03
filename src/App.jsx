@@ -1,14 +1,26 @@
-import 'katex/dist/katex.min.css'
-import { BlockMath } from 'react-katex'
+import { useDarkMode } from './hooks/useDarkMode.js'
+import ThemeToggle from './components/ui/ThemeToggle.jsx'
+import circuitLight from './assets/circuit-bg-light.svg'
+import circuitDark from './assets/circuit-bg-dark.svg'
+import SampleSizeCalculator from './calculators/sample-size-proportion/SampleSizeCalculator.jsx'
+import ExplanationSection from './content/ExplanationSection.jsx'
 
 function App() {
+  const [isDark, setIsDark] = useDarkMode()
+
   return (
-    <div className="min-h-screen bg-slate-50 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-3xl font-bold text-slate-800 mb-4">
-          Scaffolding OK 🎉
-        </h1>
-        <BlockMath math="n = \frac{Z^2 \cdot p(1-p)}{e^2}" />
+    <div
+      className="min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors"
+      style={{
+        backgroundImage: `url("${isDark ? circuitDark : circuitLight}")`,
+        backgroundRepeat: 'repeat',
+        backgroundSize: '200px 200px',
+      }}
+    >
+      <ThemeToggle isDark={isDark} setIsDark={setIsDark} />
+      <div className="py-10">
+        <SampleSizeCalculator />
+        <ExplanationSection />
       </div>
     </div>
   )
