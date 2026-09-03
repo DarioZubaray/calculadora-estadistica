@@ -24,7 +24,7 @@ export default function SampleSizeCalculator() {
 
   return (
     <div className="max-w-2xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-slate-800 mb-2">
+      <h1 className="text-3xl font-bold text-slate-800 dark:text-slate-100 mb-2">
         Calculadora de Tamaño de Muestra
       </h1>
       <p className="text-slate-500 mb-8">
@@ -143,7 +143,7 @@ export default function SampleSizeCalculator() {
             />
           </>
         )}
-        
+
         <BlockMath
           math={`n = \\frac{${result.zValue}^2 \\cdot ${expectedProportion}(1-${expectedProportion})}{${marginError}^2} = ${result.rawN}`}
         />
