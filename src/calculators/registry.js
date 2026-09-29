@@ -5,5 +5,10 @@ export const calculators = [
     description: 'Calculá cuántas personas encuestar para tu estudio',
     path: '/tamano-muestra',
   },
-  // futuras calculadoras se agregan acá
+  {
+    id: 'box-plot',
+    title: 'Diagrama de Caja y Bigotes',
+    description: 'Visualizá la distribución de tus datos: mediana, cuartiles y outliers',
+    path: '/caja-bigotes',
+  },
 ]

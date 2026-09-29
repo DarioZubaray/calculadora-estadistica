@@ -39,7 +39,7 @@ function Card({ title, defaultOpen = false, children }) {
   )
 }
 
-export default function ExplanationSection() {
+export default function SampleSizeExplanation() {
   return (
     <div className="max-w-3xl mx-auto p-6">
       <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-6">
