@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import BoxPlotCalculator from './BoxPlotCalculator.jsx'
+import BoxPlotExplanation from '../../content/BoxPlotExplanation.jsx'
 
 export default function BoxPlotPage() {
   return (
@@ -10,6 +11,7 @@ export default function BoxPlotPage() {
         </Link>
       </div>
       <BoxPlotCalculator />
+      <BoxPlotExplanation />
     </>
   )
 }
