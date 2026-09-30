@@ -3,6 +3,7 @@ import { BlockMath } from 'react-katex'
 import 'katex/dist/katex.min.css'
 import { calculateSampleSize } from './formula.js'
 import VariableLegend from '../../components/ui/VariableLegend.jsx'
+import SensitivityChart from './SensitivityChart.jsx'
 
 export default function SampleSizeCalculator() {
   const [confidenceLevel, setConfidenceLevel] = useState(95)
@@ -157,6 +158,13 @@ export default function SampleSizeCalculator() {
           </>
         )}
       </div>
+      <SensitivityChart
+        confidenceLevel={Number(confidenceLevel)}
+        populationSize={population}
+        expectedProportion={expectedProportion}
+        currentMarginError={marginErrorPercent}
+        currentN={population ? result.adjustedN : result.rawN}
+      />
     </div>
   )
 }

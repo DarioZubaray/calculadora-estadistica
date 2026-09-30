@@ -73,3 +73,25 @@ export function calculateSampleSize({ confidenceLevel, marginError, populationSi
     zValue: Number(Z.toFixed(3)),
   }
 }
+
+/**
+ * Genera puntos (margen de error → n) para graficar la sensibilidad
+ * del tamaño de muestra frente al margen de error, con los demás
+ * parámetros fijos.
+ */
+export function generateSensitivityData({ confidenceLevel, populationSize, expectedProportion = 0.5 }) {
+  const points = []
+  for (let marginErrorPercent = 1; marginErrorPercent <= 10; marginErrorPercent += 0.5) {
+    const { adjustedN, rawN } = calculateSampleSize({
+      confidenceLevel,
+      marginError: marginErrorPercent / 100,
+      populationSize,
+      expectedProportion,
+    })
+    points.push({
+      marginError: marginErrorPercent,
+      n: populationSize ? adjustedN : rawN,
+    })
+  }
+  return points
+}
