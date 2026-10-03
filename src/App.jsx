@@ -6,6 +6,7 @@ import circuitDark from './assets/circuit-bg-dark.svg'
 import Home from './pages/Home.jsx'
 import SampleSizePage from './calculators/sample-size-proportion/SampleSizePage.jsx'
 import BoxPlotPage from './calculators/box-plot/BoxPlotPage.jsx'
+import FrequencyDistributionPage from './calculators/frequency-distribution/FrequencyDistributionPage.jsx'
 
 function App() {
   const [isDark, setIsDark] = useDarkMode()
@@ -26,6 +27,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/tamano-muestra" element={<SampleSizePage />} />
             <Route path="/caja-bigotes" element={<BoxPlotPage />} />
+            <Route path="/distribucion-frecuencias" element={<FrequencyDistributionPage />} />
           </Routes>
         </div>
       </div>
