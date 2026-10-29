@@ -1,9 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useDarkMode } from './hooks/useDarkMode.js'
+
 import ThemeToggle from './components/ui/ThemeToggle.jsx'
 import circuitLight from './assets/circuit-bg-light.svg'
 import circuitDark from './assets/circuit-bg-dark.svg'
 import Home from './pages/Home.jsx'
+
+import SampleCounterPage from './calculators/sample-counter/SampleCounterPage.jsx'
 import SampleSizePage from './calculators/sample-size-proportion/SampleSizePage.jsx'
 import BoxPlotPage from './calculators/box-plot/BoxPlotPage.jsx'
 import FrequencyDistributionPage from './calculators/frequency-distribution/FrequencyDistributionPage.jsx'
@@ -25,6 +28,7 @@ function App() {
         <div className="py-10">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/conteo-muestra" element={<SampleCounterPage />} />
             <Route path="/tamano-muestra" element={<SampleSizePage />} />
             <Route path="/caja-bigotes" element={<BoxPlotPage />} />
             <Route path="/distribucion-frecuencias" element={<FrequencyDistributionPage />} />

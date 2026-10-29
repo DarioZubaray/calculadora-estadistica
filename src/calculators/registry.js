@@ -1,5 +1,11 @@
 export const calculators = [
   {
+    id: 'sample-counter',
+    title: 'Conteo de Muestra',
+    description: 'Pegá tus datos y obtené la frecuencia de cada valor con su gráfico',
+    path: '/conteo-muestra',
+  },
+  {
     id: 'sample-size-proportion',
     title: 'Tamaño de Muestra',
     description: 'Calculá cuántas personas encuestar para tu estudio',
