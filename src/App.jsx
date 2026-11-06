@@ -10,6 +10,7 @@ import SampleCounterPage from './calculators/sample-counter/SampleCounterPage.js
 import SampleSizePage from './calculators/sample-size-proportion/SampleSizePage.jsx'
 import BoxPlotPage from './calculators/box-plot/BoxPlotPage.jsx'
 import FrequencyDistributionPage from './calculators/frequency-distribution/FrequencyDistributionPage.jsx'
+import CorrelationPage from './calculators/correlation/CorrelationPage.jsx'
 
 function App() {
   const [isDark, setIsDark] = useDarkMode()
@@ -32,6 +33,7 @@ function App() {
             <Route path="/tamano-muestra" element={<SampleSizePage />} />
             <Route path="/caja-bigotes" element={<BoxPlotPage />} />
             <Route path="/distribucion-frecuencias" element={<FrequencyDistributionPage />} />
+            <Route path="/correlacion-dispersion" element={<CorrelationPage />} />
           </Routes>
         </div>
       </div>

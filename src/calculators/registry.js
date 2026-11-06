@@ -23,4 +23,10 @@ export const calculators = [
     description: 'Cargá intervalos y obtené la tabla completa con Pareto, histograma y caja y bigotes',
     path: '/distribucion-frecuencias',
   },
+  {
+    id: 'correlation',
+    title: 'Correlación y Dispersión',
+    description: 'Ingresá pares (x, y) y obtené r, R², la recta de regresión y el diagrama de dispersión',
+    path: '/correlacion-dispersion',
+  },
 ]
